@@ -10,25 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_20_081257) do
-
+ActiveRecord::Schema.define(version: 20_220_720_081_257) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "posts", force: :cascade do |t|
-    t.string "present_name", null: false
-    t.integer "present_score", default: 1, null: false
-    t.string "present_review", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'posts', force: :cascade do |t|
+    t.string 'present_name', null: false
+    t.integer 'present_score', default: 1, null: false
+    t.string 'present_review', null: false
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "nickname", null: false
-    t.integer "gender", default: 0, null: false
-    t.integer "age", default: 0, null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'users', force: :cascade do |t|
+    t.string 'nickname', null: false
+    t.integer 'gender', default: 0, null: false
+    t.integer 'age', default: 0, null: false
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
-
 end
