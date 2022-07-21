@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    models:
+      post: 投稿
+      user: ユーザー
+    attributes:
+      user:
+        nickname: ニックネーム
+        gender: 性別
+        age: 年齢
