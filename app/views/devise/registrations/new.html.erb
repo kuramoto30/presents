@@ -10,12 +10,12 @@
 
   <div class="field">
     <%= f.label :gender %><br />
-    <%= f.select :gender, User.genders_i18n %>
+    <%= f.select :gender, User.genders_i18n.invert %>
   </div>
 
   <div class="field">
     <%= f.label :age %><br />
-    <%= f.select :age, User.ages_i18n %>
+    <%= f.select :age, User.ages_i18n.invert %>
   </div>
 
   <div class="field">
