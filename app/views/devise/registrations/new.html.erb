@@ -5,17 +5,17 @@
 
   <div class="field">
     <%= f.label :nickname %><br />
-    <%= f.email_field :nickname, autofocus: true, autocomplete: "nickname" %>
+    <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname" %>
   </div>
 
   <div class="field">
     <%= f.label :gender %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "gender" %>
+    <%= f.select :gender, User.genders_i18n %>
   </div>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "age" %>
+    <%= f.label :age %><br />
+    <%= f.select :age, User.ages_i18n %>
   </div>
 
   <div class="field">

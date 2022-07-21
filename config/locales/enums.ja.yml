@@ -1,0 +1,17 @@
+ja:
+  enums:
+    user:
+      gender:
+        man: "男性"
+        woman: "女性"
+      age:
+        single_digit: "10歳未満"
+        teens: "10代"
+        twenties: "20代"
+        thirties: "30代"
+        forties: "40代"
+        fifties: "50代"
+        sixties: "60代"
+        seventies: "70代"
+        eighties: "80代"
+        nineties: "90代"
