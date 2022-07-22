@@ -8,3 +8,7 @@ ja:
         nickname: ニックネーム
         gender: 性別
         age: 年齢
+      post:
+        present_name: プレゼントの名前
+        present_score: 評価
+        present_review: 感想
