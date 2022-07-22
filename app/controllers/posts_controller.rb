@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-
   def index
     @posts = Post.all
   end
@@ -38,5 +37,4 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:present_name, :present_score, :present_review)
   end
-
 end
