@@ -1,2 +1,5 @@
-<h1>Post#show</h1>
-<p>Find me in app/views/post/show.html.erb</p>
+<h1>投稿詳細</h1>
+<p>プレセントの名前  :<%= @post.present_name %></p>
+<p>プレセントの評価  :<%= @post.present_score_i18n %></p>
+<p>プレセントの感想  :<%= @post.present_review %></p>
+<%= link_to "投稿一覧", posts_path %>

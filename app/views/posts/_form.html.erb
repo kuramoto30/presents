@@ -1,0 +1,17 @@
+<%= form_with model: @post, local: true do |f| %>
+  <div>
+    <%= f.label :present_name %>
+    <%= f.text_field :present_name %>
+  </div>
+  <div>
+    <%= f.label :present_score %>
+    <%= f.select :present_score, Post.present_scores_i18n.invert %>
+  </div>
+  <div>
+    <%= f.label :present_review %>
+    <%= f.text_area :present_review %>
+  </div>
+  <div>
+    <%= f.submit  button_value %>
+  </div>
+  <% end %>

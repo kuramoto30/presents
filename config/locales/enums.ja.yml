@@ -15,3 +15,10 @@ ja:
         seventies: "70代"
         eighties: "80代"
         nineties: "90代"
+    post:
+      present_score:
+        Very_Bad: "嫌だった"
+        Bad: "悪くない"
+        Medium: "良くも悪くもない"
+        Good: "まあまあ良い"
+        Very_Good: "とても嬉しかった"
