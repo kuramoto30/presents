@@ -1,2 +1,19 @@
-<h1>Post#edit</h1>
-<p>Find me in app/views/post/edit.html.erb</p>
+<h1>編集</h1>
+<%= form_with model: @post, local: true do |f| %>
+  <div>
+    <%= f.label :present_name %>
+    <%= f.text_field :present_name %>
+  </div>
+  <div>
+    <%= f.label :present_score %>
+    <%= f.select :present_score, Post.present_scores_i18n.invert %>
+  </div>
+  <div>
+    <%= f.label :present_review %>
+    <%= f.text_area :present_review %>
+  </div>
+  <div>
+    <%= f.submit "送信" %>
+  </div>
+  <%= link_to "投稿一覧", posts_path %>
+<% end %>
