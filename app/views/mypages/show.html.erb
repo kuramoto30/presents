@@ -1,2 +1,15 @@
-<h1>Mypages#show</h1>
-<p>Find me in app/views/mypages/show.html.erb</p>
+<h1>MyPage</h1> <%= link_to "投稿一覧", posts_path %>
+<p><%= @nickname %>さんのプロフィール</p>
+<p>性別<%= @gender %></p>
+<p>年齢<%= @age %></p>
+
+
+<p><%= @nickname %>さんの投稿一覧</p>
+<% @posts.each do |post| %>
+<p>
+<%= post.present_name %>
+<%= post.present_review %>
+<%= post.present_score %>
+<% end %>
+</p>
+<%= link_to "投稿一覧", posts_path %>
