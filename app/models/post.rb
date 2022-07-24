@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
   belongs_to :user
+  has_many :keeps, dependent: :destroy
   with_options presence: true do
     validates :present_name
     validates :present_score
