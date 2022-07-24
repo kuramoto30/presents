@@ -8,6 +8,10 @@ class Post < ApplicationRecord
     validates :present_review
   end
 
+  def keeped_by?(user)
+    keeps.exists?(user_id: user.id)
+  end
+
   enum present_score: {
     Very_Bad: 1,
     Bad: 2,
@@ -15,4 +19,5 @@ class Post < ApplicationRecord
     Good: 4,
     Very_Good: 5
   }
+
 end
