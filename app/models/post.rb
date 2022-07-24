@@ -9,7 +9,7 @@ class Post < ApplicationRecord
   end
 
   def keeped_by?(user)
-    keeps.exists?(user_id: user.id)
+    keeps.any? { |keep| keep.user_id == user.id }
   end
 
   enum present_score: {
