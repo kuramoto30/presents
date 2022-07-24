@@ -4,6 +4,16 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   devise :database_authenticatable, :registerable,
          :rememberable, :validatable
+
+        def self.guest
+        find_or_create_by!(email: "guest@example.com") do |user|
+          user.password = SecureRandom.urlsafe_base64
+          user.nickname = "ゲスト"
+          user.gender = 1
+          user.age = 3
+        end
+      end
+
   with_options presence: true do
     validates :nickname
     validates :gender
