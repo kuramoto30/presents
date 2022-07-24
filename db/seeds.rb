@@ -12,9 +12,15 @@ post3 = user3.posts.create!(present_name: '腕時計', present_score: 3, present
 post4 = user1.posts.create!(present_name: 'コーヒー豆', present_score: 4, present_review: 'よく飲むから嬉しかった。でも誕生日にはちょっと、、、')
 post5 = user2.posts.create!(present_name: 'お肉', present_score: 2, present_review: '固くて不味かった。気持ちは嬉しかった。')
 post6 = user3.posts.create!(present_name: '低音調理器具', present_score: 4, present_review: '嬉しいけど使い方わからない。')
+post7 = user3.posts.create!(present_name: 'スマホケース', present_score: 5, present_review: '欲しかった物だから嬉しかった')
+post8 = user2.posts.create!(present_name: '包丁', present_score: 4, present_review: '切れ味が良く、料理が楽しい')
+post9 = user1.posts.create!(present_name: '財布', present_score: 1, present_review: 'デザインがイマイチだった')
+post10 = user1.posts.create!(present_name: 'ネックレス', present_score: 2, present_review: '気持ちは嬉しいが多分つけない')
+
+
 
 post1.keeps.create!(user_id: user1.id)
 
-User.create!(email: "test@examle.com", nickname: "テストさん", password:"password")
+User.create!(email: "test@examle.com", gender: 1, age: 3,nickname: "テストさん", password:"password")
 
 puts '初期データの投入に成功'
