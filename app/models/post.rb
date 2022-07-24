@@ -1,6 +1,7 @@
 class Post < ApplicationRecord
   belongs_to :user
   has_many :keeps, dependent: :destroy
+  has_many :keeped_users, through: :keeps, source: :user
   with_options presence: true do
     validates :present_name
     validates :present_score

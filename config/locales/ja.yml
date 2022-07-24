@@ -3,6 +3,7 @@ ja:
     models:
       post: 投稿
       user: ユーザー
+      keep: キープ
     attributes:
       user:
         nickname: ニックネーム
@@ -12,3 +13,6 @@ ja:
         present_name: プレゼントの名前
         present_score: 評価
         present_review: 感想
+      keep:
+        user: ユーザー
+        post: 投稿

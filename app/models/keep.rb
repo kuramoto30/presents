@@ -5,4 +5,5 @@ class Keep < ApplicationRecord
     scope: :post_id,
     message: "は同じ投稿を２個以上キープできません",
   }
+
 end
