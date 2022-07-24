@@ -14,7 +14,7 @@
      <header>
       <%= render "layouts/header" %>
     </header>
-    <div class="base-container">
+    <div class="base-container <%= devise_controller? ? 'mw-md' : 'mw-xl' %>">
       <%= yield %>
     </div>
   </body>
