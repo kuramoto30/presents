@@ -5,13 +5,14 @@
 
         <% if post.keeped_by?(current_user) %>
         <%# 「いいね！」済み %>
-         <button type="button" class="btn btn-secondary btn-md btn-block">キープ済み</button>
-         <% else %>
+        <%= render "keep", post: post %>
+        <% else %>
         <%# 「いいね」していない %>
-          <button type="button" class="btn btn-secondary btn-md btn-block">キープする</button>
+        <%= render "diskeep", post: post %>
         <% end %>
         </p>
         <!-- ***** 以上を追加 ***** -->
+
           <p class="card-text mt-3">
           <%= post.present_name %>
           </p>
