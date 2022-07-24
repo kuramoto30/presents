@@ -1,4 +1,4 @@
-<h1>MyPage <%= @user.id %></h1> <%= link_to "投稿一覧", posts_path %>
+<h1>MyPage <%= @user.id %></h1>
 <p><%= @nickname %>さんのプロフィール</p>
 <p>性別<%= @gender %></p>
 <p>年齢<%= @age %></p>
@@ -12,4 +12,4 @@
 <%= post.present_score %>
 <% end %>
 </p>
-<%= link_to "投稿一覧", posts_path %>
+
