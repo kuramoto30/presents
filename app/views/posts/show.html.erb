@@ -12,9 +12,10 @@
          <%# 「いいね」していない %>
          <%= render "diskeep", post: @post %>
          <% end %>
+         <%= @post.keeps_count %>
          </p>
         <!-- ***** 以上を追加 ***** -->
-
+       
           <p class="card-text mt-3">
           <%= @post.present_name %>
           </p>
