@@ -23,7 +23,7 @@ class PostsController < ApplicationController
 
   def update
     @post.update!(post_params)
-    redirect_to  post_path
+    redirect_to post_path
   end
 
   def destroy

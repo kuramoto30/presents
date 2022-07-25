@@ -19,5 +19,4 @@ class Post < ApplicationRecord
     Good: 4,
     Very_Good: 5
   }
-
 end

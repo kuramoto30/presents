@@ -21,6 +21,6 @@ post10 = user1.posts.create!(present_name: 'ネックレス', present_score: 2, 
 
 post1.keeps.create!(user_id: user1.id)
 
-User.create!(email: "test@examle.com", gender: 1, age: 3,nickname: "テストさん", password:"password")
+User.create!(email: "test@example.com", gender: 1, age: 3,nickname: "テストさん", password:"password")
 
 puts '初期データの投入に成功'
