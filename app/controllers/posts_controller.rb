@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
 
   def index
-    @posts = Post.all
+    @posts = Post.includes(:user, :keeps).order(:created_at)
   end
 
   def new
@@ -23,7 +23,7 @@ class PostsController < ApplicationController
 
   def update
     @post.update!(post_params)
-    redirect_to  post_path
+    redirect_to post_path
   end
 
   def destroy

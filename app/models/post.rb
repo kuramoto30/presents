@@ -1,9 +1,15 @@
 class Post < ApplicationRecord
   belongs_to :user
+  has_many :keeps, dependent: :destroy
+  has_many :keeped_users, through: :keeps, source: :user
   with_options presence: true do
     validates :present_name
     validates :present_score
     validates :present_review
+  end
+
+  def keeped_by?(user)
+    keeps.any? { |keep| keep.user_id == user.id }
   end
 
   enum present_score: {
