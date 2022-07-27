@@ -4,6 +4,8 @@ class PostsController < ApplicationController
   PER_PAGE = 2
 
   def index
+    @q = User.ransack(params[:q])
+    @serch_posts = @q.result.page(params[:page]).per(PER_PAGE)
     @posts = Post.includes(:user, :keeps).order(:created_at).limit(20).page(params[:page]).per(PER_PAGE)
   end
 
