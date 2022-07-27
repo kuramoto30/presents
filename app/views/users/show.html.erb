@@ -12,11 +12,16 @@
    <p>
      <p>年齢:<%= @user.age_i18n %></p>
    </p>
-   
+
  </div>
 </div>
 
+<h1><%= @user.nickname %>さんの投稿一覧</h1>
 <div class="row">
 <%= render partial: 'post', collection: @posts %>
 </div>
 
+<h1>MyPage <%= @user.nickname %>さんのキープ一覧</h1>
+<div class="row">
+<%= render partial: 'keep', collection: @keep_posts %>
+</div>
