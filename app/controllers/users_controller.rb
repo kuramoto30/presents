@@ -3,12 +3,11 @@ class UsersController < ApplicationController
 
   def create; end
 
-  def show 
+  def show
     @user = User.find(params[:id])
-    @nickname = current_user.nickname
-    @gender = current_user.gender
-    @age = current_user.age
-    @posts = current_user.posts
+    keeps = Keep.where(user_id: @user.id).pluck("post_id DESC")
+    @keep_posts = Post.find(keeps)
+    @posts = @user.posts.order("id DESC")
   end
 
   def edit; end
