@@ -1,15 +1,21 @@
-<h1>MyPage <%= @user.id %></h1>
-<p><%= @nickname %>さんのプロフィール</p>
-<p>性別<%= @gender %></p>
-<p>年齢<%= @age %></p>
+<h1>MyPage <%= @user.nickname %>さん</h1>
+<div class="card content-card border-dark mb-3 " style="width: 18rem;"  >
+ <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+  <div class="card-body text-dark ">
 
+   <p class="card-text mt-3">
+    <p>ニックネーム:<%= @user.nickname%></p>
+   </p>
+   <p>
+     <p>性別:<%= @user.gender_i18n %></p>
+   </p>
+   <p>
+     <p>年齢:<%= @user.age_i18n %></p>
+   </p>
+ </div>
+</div>
 
-<p><%= @nickname %>さんの投稿一覧</p>
-<% @posts.each do |post| %>
-<p>
-<%= post.present_name %>
-<%= post.present_review %>
-<%= post.present_score %>
-<% end %>
-</p>
+<div class="row">
+<%= render partial: 'post', collection: @posts %>
+</div>
 
