@@ -1,12 +1,12 @@
 class PostsController < ApplicationController
   before_action :set_search
   before_action :set_post, only: %i[show edit update destroy]
-  PER_PAGE = 10
+  PER_PAGE = 7
 
   def index
-    @posts = Post.includes(:user, :keeps).order(:created_at).page(params[:page]).per(PER_PAGE).limit(20)
+    @posts = Post.includes(:user, :keeps).order(:created_at).page(params[:page]).per(PER_PAGE)
     @q = Post.ransack(params[:q])
-    @posts = @q.result.page(params[:page]).per(PER_PAGE).limit(20)
+    @posts = @q.result.page(params[:page]).per(PER_PAGE)
   end
 
   def new
