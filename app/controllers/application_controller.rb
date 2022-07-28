@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_search
-  PER_PAGE = 10
+  PER_PAGE = 7
   
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[nickname gender age])
@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 
   def set_search
     @q = Post.ransack(params[:q])
-    @posts = @q.result.page(params[:page]).per(PER_PAGE).limit(20)
+    @posts = @q.result.page(params[:page]).per(PER_PAGE)
   end
 
 end
