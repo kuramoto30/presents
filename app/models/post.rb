@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
   belongs_to :user
+  has_many :comments, dependent: :destroy
   has_many :keeps, dependent: :destroy
   has_many :keeped_users, through: :keeps, source: :user
   with_options presence: true do
