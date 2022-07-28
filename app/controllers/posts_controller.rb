@@ -1,9 +1,11 @@
 class PostsController < ApplicationController
-
   before_action :set_post, only: %i[show edit update destroy]
+  PER_PAGE = 10
 
   def index
-    @posts = Post.includes(:user, :keeps).order(:created_at)
+    @posts = Post.includes(:user, :keeps).order(:created_at).page(params[:page]).per(PER_PAGE).limit(20)
+    @q = Post.ransack(params[:q])
+    @posts = @q.result.page(params[:page]).per(PER_PAGE).limit(20)
   end
 
   def new
@@ -30,6 +32,7 @@ class PostsController < ApplicationController
     @post.destroy!
     redirect_to root_path
   end
+
 
   private
 
