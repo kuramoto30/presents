@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :posts, dependent: :destroy
-  has_many :comments, dependent: :destroy
+  has_many :comments, dependent: :destroy, through: :comments, source: :post
   has_many :keeps, dependent: :destroy
   has_many :keeped_posts, through: :keeps, source: :post
   devise :database_authenticatable, :registerable,

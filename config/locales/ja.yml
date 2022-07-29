@@ -4,6 +4,7 @@ ja:
       post: 投稿
       user: ユーザー
       keep: キープ
+      comment: コメント
     attributes:
       user:
         nickname: ニックネーム
@@ -16,3 +17,5 @@ ja:
       keep:
         user: ユーザー
         post: 投稿
+      comment:
+       comment: コメント
