@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       get 'search',to: "posts#index"
     end
     resource :keeps, only: [:create, :destroy]
+    resources :comments, only: [:create, :destroy]
   end
 
 end 
