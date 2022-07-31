@@ -28,9 +28,9 @@
       </div>
 </div>
 <% @comments .each do |c| %>
-  <p>
-    <%= c.comment %>
-  </p>
+   <P><%= l c.created_at, format: :short %></p>
+   <p> <%= c.comment %></p>
+   <hr>
 <% end %>
 
 <%= form_with model: [@post, @comment], local: true do |f| %>
