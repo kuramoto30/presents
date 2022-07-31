@@ -31,7 +31,9 @@
    <p> <%= @post.user.nickname %></p>
    <P><%= l c.created_at, format: :short %></p>
    <p> <%= c.comment %></p>
+   <% if current_user.id == c.user_id %>
    <%= link_to "削除", post_comment_path(@post, c), method: :delete %>
+   <% end %> 
    <hr>
 <% end %>
 
