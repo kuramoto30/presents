@@ -28,9 +28,11 @@
       </div>
 </div>
 <% @comments .each do |c| %>
-  <p>
-    <%= c.comment %>
-  </p>
+   <p> <%= @post.user.nickname %></p>
+   <P><%= l c.created_at, format: :short %></p>
+   <p> <%= c.comment %></p>
+   <%= link_to "削除", post_comment_path(@post, c), method: :delete %>
+   <hr>
 <% end %>
 
 <%= form_with model: [@post, @comment], local: true do |f| %>
