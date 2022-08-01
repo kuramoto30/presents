@@ -45,6 +45,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:present_name, :present_score, :present_review)
+    params.require(:post).permit(:present_name, :present_score, :present_review,:image)
   end
 end

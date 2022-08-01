@@ -36,6 +36,7 @@ gem 'devise-bootstrap-views', '~> 1.0'
 gem 'kaminari'
 gem 'bootstrap4-kaminari-views'
 gem 'ransack'
+gem 'carrierwave', '~> 2.0'
 
 
 group :development, :test do

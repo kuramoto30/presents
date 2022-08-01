@@ -3,6 +3,7 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :keeps, dependent: :destroy
   has_many :keeped_users, through: :keeps, source: :user
+  mount_uploader :image, ImageUploader
   with_options presence: true do
     validates :present_name
     validates :present_score
