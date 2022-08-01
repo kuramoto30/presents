@@ -1,5 +1,5 @@
 <%= form_with model: @post, local: true do |f| %>
-  <p><%= form.file_field :image %></p>
+  <p><%= form.file_field :image ,accept: "image/png,image/jpeg,image/gif"  %></p>
   <div class="form-group">
     <%= f.label :present_name %>
     <%= f.text_field :present_name, class: 'form-control' %>
